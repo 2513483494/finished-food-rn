@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import border from '../styled/border'
 
-export  const SearchWrap=border(
-{
-    Comp:styled.div`
+export const SearchWrap = border(
+    {
+        Comp: styled.div`
             padding:.1rem .15rem;
             div{
                 
@@ -19,13 +19,6 @@ export  const SearchWrap=border(
                     height:.22rem;
                     margin-right:.05rem;
                 }
-            }
-            `,
-    width:"0px"
-
-}
-
+            }`
+    }
 )
-
-
-

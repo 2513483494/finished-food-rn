@@ -11,5 +11,4 @@ const border=({Comp,width="1px",style="solid",color="#ccc",radius="10px"})=>{
     return BoderComp;
 }
 
-
 export default border

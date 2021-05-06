@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
-
-export const HeaderWrap=styled.div`
+export const HeaderWrap = styled.div`
     height:.44rem;
     display:flex;
     background:#ee742f;
@@ -27,14 +26,9 @@ export const HeaderWrap=styled.div`
             background:#fff;
             color:#ee742f;
         }
-
     }
-  
-
 `
-
-export const CateWrap=styled.div`
+export const CateWrap = styled.div`
     height:100%;
     overflow:hidden;
-
 `

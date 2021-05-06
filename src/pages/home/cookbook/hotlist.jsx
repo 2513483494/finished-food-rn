@@ -4,18 +4,18 @@ import { connect } from 'react-redux'
 
 
 @connect((state) => ({
-    hotlist: state.home.list
+    Hotlist: state.home.list
 }))
 
 
-class hotlist extends Component {
+class Hotlist extends Component {
     render() {
         return (
             <HotListWrap>
                 <header>精品好菜</header>
                 <div>
                     {
-                        this.props.hotlist.slice(0,10).map(value => (
+                        this.props.Hotlist.slice(0, 10).map(value => (
                             <figure>
                                 <img src={value.img} alt="" />
                                 <figcaption>
@@ -32,4 +32,4 @@ class hotlist extends Component {
     }
 }
 
-export default hotlist
+export default Hotlist

@@ -2,21 +2,19 @@ import React, { Component } from 'react'
 import { CateWrap } from './styledgory'
 import { get } from '../../utils/http'
 
-
 export default class Category extends Component {
     state = {
         datasource: null,
         currentItem: "",
-        defaultItem:""
+        defaultItem: ""
     }
 
-    static getDerivedStateFromProps(props,state){
-        if(props.defaultItem!==state.defaultItem){
+    static getDerivedStateFromProps(props, state) {
+        if (props.defaultItem !== state.defaultItem) {
             return {
                 ...state,
-                defaultItem:props.defaultItem,
-                currentItem:props.defaultItem
-
+                defaultItem: props.defaultItem,
+                currentItem: props.defaultItem
             }
         }
         return null
@@ -34,7 +32,6 @@ export default class Category extends Component {
         })
     }
 
-
     handleClick = (v) => {
         return () => {
             this.setState({
@@ -44,11 +41,9 @@ export default class Category extends Component {
 
     }
 
-
-
     render() {
 
-        let {type}=this.props
+        let { type } = this.props
         let data = this.state.datasource ? Object.keys(this.state.datasource[type]) : []
         let content = this.state.datasource ? this.state.datasource[type][this.state.currentItem] : []
         return (
@@ -58,10 +53,9 @@ export default class Category extends Component {
                         {
                             data.map(value => {
                                 return (
-                                    this.state.currentItem == value ?
+                                    this.state.currentItem === value ?
                                         <li key={value} className="active"><span>{value}</span></li> :
                                         <li key={value} onClick={this.handleClick(value)} >{value}</li>
-
                                 )
                             })
                         }
@@ -77,7 +71,6 @@ export default class Category extends Component {
                                 )
                             })
                         }
-
                     </ul>
                 </div>
             </CateWrap>

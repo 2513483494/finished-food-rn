@@ -1,28 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react'
-
 import { Grid } from 'antd-mobile'
 import { HotCatWrap } from './styledCookBook'
-import header from './header';
 import { get } from '../../../utils/http'
 
-
-
-
-
-export default class a extends Component {
+export default class HotCat extends Component {
     state = {
         hotList: []
     }
-
     async componentDidMount() {
         let result = await get(
             {
                 url: "/api/hotcate"
             }
         )
-
-            
         let data = result.map((value) => ({
             key: value.id,
             title: value.title,
@@ -33,9 +24,6 @@ export default class a extends Component {
         this.setState({
             hotList: data
         })
-
-
-
     }
 
     _renderItem = dataItem => (
