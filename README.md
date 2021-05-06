@@ -1,3 +1,7 @@
+更改配置文件，node-modules中的react-scripts
+启动程序，npm start/yarn start
+启动mock获取数据，npm run mock
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
